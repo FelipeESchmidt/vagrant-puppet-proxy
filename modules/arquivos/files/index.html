@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 1 | Vagrant</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="container">
+            <nav>
+                <h1 class="title">Trabalho 1 - Vagrant</h1>
+                <div class="components">
+                    <h3 class="component">Felipe S</h3>
+                    <h3 class="component">Gabriel W</h3>
+                    <h3 class="component">Luis T</h3>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <section class="m-top">
+        <div class="container">
+            <h3>Servidor Utilizado</h3>
+            <p class="descricao">
+                O servidor utilizado nesta box foi o <i>Apache</i> (apache2), pois, ele 
+                é o servidor mais popular e também é muito confiável. O apache é utilizado
+                por gigantes como Netflix, Airbnb, eBay, Cisco, BBC, IBM, Nike, Microsoft,
+                entre muitos são apenas alguns exemplos que usufruem das funcionalidades desse
+                servidor que atende às solicitações de acesso de conteúdo de vários usuários
+                simultaneamente.
+            </p>
+        </div>
+    </section>
+
+    <section class="m-top">
+        <div class="container">
+            <h3>Linguagem de provisionamento</h3>
+            <p class="descricao">
+                A linguagem de provisionamento utiizada foi a Puppet, e foi escolhida pois é
+                a mais utilizada e desta maneira é mais fácil de encontrar documentação
+                online, fazendo com que seja mais fácil encontrar e resolver erros durante
+                o desenvolvimento do provisionamento com Vagrant.
+            </p>
+        </div>
+    </section>
+
+    <section class="m-top">
+        <div class="container">
+            <h3>Vagrant File Used</h3>
+            <xmp>    
+                Vagrant.configure("2") do |config|
+
+                    config.vm.define "server" do |server|
+                        server.vm.box = "ubuntu/bionic64"
+                        server.vm.network "private_network", ip: $ip
+
+                        server.vm.provider "virtualbox" do |virtualboxMachine|
+                        virtualboxMachine.name = "serverApacheAndPuppet"
+                        end
+                    end
+
+                    config.vm.provision :"shell", path: "installpuppet.sh"
+                    config.vm.provision :puppet do |puppet|
+                        puppet.manifests_path = "manifests"
+                        puppet.module_path    = "modules"
+                        puppet.options = ['--verbose']
+                    end
+
+                    config.vm.post_up_message = $message
+
+                end
+            </xmp>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <ol>
+                <li>
+                    Cole os arquivos em um novo diretório
+                    <ul>
+                        <li>VagrantFile</li>
+                        <li>installpuppet.sh</li>
+                        <li>/manifests</li>
+                        <li>/modules</li>
+                    </ul>
+                </li>
+                <li>
+                    Execute o seguinte comando no diretório
+                    <ul>
+                        <li>vagrant up</li>
+                    </ul>
+                </li>
+                <li>
+                    Abra o navegador no link a seguir:<a href="http://192.168.60.58" target="_blank">192.168.60.58</a>
+                </li>
+            </ol>
+        </div>
+    </section>
+</body>
+</html>
