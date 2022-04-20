@@ -4,3 +4,5 @@ include system_update
 include apache
 include sarg
 include squid
+include config
+include reload
