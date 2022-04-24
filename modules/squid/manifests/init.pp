@@ -1,8 +1,8 @@
 class squid {
 
-  package { "squid":
+  package { "squid3":
     ensure  => present,
-    require => Class["sarg"],
+    require => Class["system_update"],
   }
 
 }
