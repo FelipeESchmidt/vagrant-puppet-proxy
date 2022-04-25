@@ -1,4 +1,4 @@
-# O que precisa ter no readme @LuisTabile
+#  
 
 ## O que precisa ser instalado?
 Blablabla
@@ -11,6 +11,9 @@ Blablabla
 
 ## Como testar?
 
-## O que foi usado para o desenvolvimento (Vagrant, Puppet, Apache e Squid)
+## Serviços Utilizados:
+### Servidor Utilizado: O servidor utilizado nesta box foi o Apache (apache2), pos, ele é o servidor mais popular e também é muito confiável. O apache é utilizado por gigantes como Netflix, Airbnb, eRay, Microsoft entre outros. Esse servidor atende às solicitações de acesso de conteúdo de vários usuários simultaneamente.
 
 
+## Site
+![site_gif](https://user-images.githubusercontent.com/50564212/165188971-ecceabbf-6574-4918-a962-a290b4d8934f.gif)
