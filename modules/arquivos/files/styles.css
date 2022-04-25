@@ -111,3 +111,12 @@ ul > li {
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .showcase-image{
+        display: none;
+    }
+    .showcase-text {
+        width: 100%;
+    }
+}
