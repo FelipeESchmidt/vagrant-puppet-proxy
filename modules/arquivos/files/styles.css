@@ -23,7 +23,7 @@ nav {
     align-items: center;
 }
 .m-top{
-    margin-top: 20px;
+    padding: 20px;
 }
 xmp {
     margin-top: 5px;
@@ -38,6 +38,14 @@ xmp {
 .component {
     margin-left: 10px;
     color: white;
+}
+
+a{
+    text-decoration: none;
+}
+a:link:hover {
+    transform: scale(1.1);
+    transition: 100ms;
 }
 ul, ol {
     list-style-position: inside;
