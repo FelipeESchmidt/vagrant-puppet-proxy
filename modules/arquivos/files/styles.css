@@ -83,6 +83,28 @@ ul > li {
     margin-left: 2em;
 }
 
+.divisor{
+    display: flex;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.divisor .text-part{
+    width: 50%;
+}
+
+.divisor .image-part{
+    width: 40%;
+    margin-left: 10%;
+}
+
+.divisor .image-part img{
+    width: 100%;
+    margin-left: 20px;
+}
+
 @media screen and (max-width: 768px) {
     nav {
         display: flex;
