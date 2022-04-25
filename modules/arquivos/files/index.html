@@ -16,32 +16,16 @@
           <div class="components">
             <a href="#nav-servicos" class="component">Servidor</a>
             <a href="#nav-linguagem" class="component">Linguagem</a>
-            <a href="#nav-vagrant" class="component">Vagrant</a>
             <a href="#nav-proxy" class="component">Proxy</a>
+            <a href="#nav-vagrant" class="component">Vagrant</a>
             <a href="#nav-squid" class="component">Squid</a>
           </div>
         </nav>
       </div>
     </header>
 
-    <section class="m-top">
-      <div class="container showcase">
-        <div class="showcase-text">
-          <h2>Integrantes</h2>
-          <p>Felipe Schmidt</p>
-          <p>Gabriel Walker</p>
-          <p>Luis Tabile</p>
-        </div>
-        <div class="showcase-image">
-          <img
-            src="https://o.remove.bg/downloads/63cf3276-8478-4b17-a55a-5dfc864bd9e2/pngtree-database-distributed-connection-network-computer-flat-color-png-image_1655749-removebg-preview.png"
-          />
-        </div>
-      </div>
-    </section>
-
     <section class="m-top" id="nav-servicos">
-      <div class="container divisor">
+      <div class="container divisor" id="showcase-left">
         <div class="text-part">
           <h3>Servidor Utilizado</h3>
           <p class="descricao">
@@ -57,21 +41,72 @@
         <div class="image-part">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Apache_HTTP_server_logo_%282019-present%29.svg/2560px-Apache_HTTP_server_logo_%282019-present%29.svg.png"
+            alt="Apache Logo"
           />
         </div>
       </div>
     </section>
 
     <section class="m-top" id="nav-linguagem">
-      <div class="container">
-        <h3>Linguagem de provisionamento</h3>
+      <div class="container divisor reverse" id="showcase-right">
+        <div class="text-part">
+          <h3>Linguagem de provisionamento</h3>
+          <p class="descricao">
+            A linguagem de provisionamento utiizada foi a Puppet, e foi
+            escolhida pois é a mais utilizada e desta maneira é mais fácil de
+            encontrar documentação online, fazendo com que seja mais fácil
+            encontrar e resolver erros durante o desenvolvimento do
+            provisionamento com Vagrant.
+          </p>
+        </div>
+        <div class="image-part">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Puppet_transparent_logo.svg/2560px-Puppet_transparent_logo.svg.png"
+            alt="Puppet Logo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="m-top" id="nav-proxy">
+      <div class="container" id="showcase-down">
+        <div class="divisor">
+          <div class="text-part">
+            <h3>Serviço provisionado</h3>
+            <p class="descricao">
+              O serviço utilizado nesta server proxy foi o Squid, pois o uso do
+              mesmo como Proxy/Cache é uma das opções mais utilizadas em
+              ambientes corporativos que adotam software livre para administrar
+              a rede, seja através da otimização e melhoria do desempenho da
+              rede atuando como servidor de cache ou como proxy, implementando
+              restrições de acesso à Internet, que nem sempre é possível fazer
+              através do firewall.
+            </p>
+          </div>
+          <div class="image-part">
+            <img
+              src="https://www.arduinoecia.com.br/wp-content/uploads/2020/02/squid-logo-png.png"
+              alt="Squid Logo"
+            />
+          </div>
+        </div>
+        <br />
         <p class="descricao">
-          A linguagem de provisionamento utiizada foi a Puppet, e foi escolhida
-          pois é a mais utilizada e desta maneira é mais fácil de encontrar
-          documentação online, fazendo com que seja mais fácil encontrar e
-          resolver erros durante o desenvolvimento do provisionamento com
-          Vagrant.
+          O serviço provisionado foi um servidor proxy no qual seu objetivo é
+          bloquear sites de buscas, tais quais:
         </p>
+        <ul>
+          <li>google.com</li>
+          <li>bing.com</li>
+          <li>yahoo.com</li>
+          <li>duckduckgo.com</li>
+          <li>ask.com</li>
+          <li>aol.com</li>
+          <li>searchencrypt.com</li>
+          <li>msn.com</li>
+          <li>wolframalpha.com</li>
+          <li>nationmaster.com</li>
+        </ul>
       </div>
     </section>
 
@@ -132,37 +167,6 @@
             >
           </li>
         </ol>
-      </div>
-    </section>
-
-    <section class="m-top" id="nav-proxy">
-      <div class="container">
-        <h3>Serviço provisionado</h3>
-        <p class="descricao">
-          O serviço utilizado nesta server proxy foi o Squid, pois o uso do
-          mesmo como Proxy/Cache é uma das opções mais utilizadas em ambientes
-          corporativos que adotam software livre para administrar a rede, seja
-          através da otimização e melhoria do desempenho da rede atuando como
-          servidor de cache ou como proxy, implementando restrições de acesso à
-          Internet, que nem sempre é possível fazer através do firewall.
-        </p>
-        <br />
-        <p class="descricao">
-          O serviço provisionado foi um servidor proxy no qual seu objetivo é
-          bloquear sites de buscas, tais quais:
-        </p>
-        <ul>
-          <li>google.com</li>
-          <li>bing.com</li>
-          <li>yahoo.com</li>
-          <li>duckduckgo.com</li>
-          <li>ask.com</li>
-          <li>aol.com</li>
-          <li>searchencrypt.com</li>
-          <li>msn.com</li>
-          <li>wolframalpha.com</li>
-          <li>nationmaster.com</li>
-        </ul>
       </div>
     </section>
 
@@ -247,9 +251,26 @@
         </ol>
       </div>
     </section>
-    <br />
-    <br />
 
+    <footer>
+      <div class="container showcase">
+        <div class="showcase-text">
+          <h2>Integrantes</h2>
+          <p>Felipe Schmidt</p>
+          <p>Gabriel Walker</p>
+          <p>Luis Tabile</p>
+        </div>
+        <div class="showcase-image">
+          <a
+            href="https://github.com/FelipeESchmidt/vagrant-puppet-proxy"
+            target="blank"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+              alt="Github Logo"
+          /></a>
+        </div>
+      </div>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>

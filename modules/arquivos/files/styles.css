@@ -23,7 +23,7 @@ nav {
     align-items: center;
 }
 .m-top{
-    padding: 20px;
+    padding: 50px;
 }
 xmp {
     margin-top: 5px;
@@ -97,7 +97,7 @@ ul > li {
 
 .divisor .image-part{
     width: 40%;
-    margin-left: 10%;
+    margin: 0 5%;
 }
 
 .divisor .image-part img{
@@ -118,5 +118,20 @@ ul > li {
     }
     .showcase-text {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .image-part{
+        display: none;
+    }
+    .divisor .text-part {
+        width: 100%;
+    }
+    .m-top{
+        padding: 10px;
+    }
+    xmp{
+        display: none;
     }
 }
