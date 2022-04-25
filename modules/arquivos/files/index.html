@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <title translate="no">Trabalho 2 | Vagrant</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -22,6 +23,22 @@
         </nav>
       </div>
     </header>
+
+    <section class="m-top" >
+      <div class="container showcase">
+        <div class="showcase-text">
+          <h2>Integrantes</h2>
+          <p>Felipe Schmidt</p>
+          <p>Gabriel Walker</p>
+          <p>Luis Tabile</p>
+        </div>
+        <div class="showcase-image">
+          <img
+            src="https://o.remove.bg/downloads/63cf3276-8478-4b17-a55a-5dfc864bd9e2/pngtree-database-distributed-connection-network-computer-flat-color-png-image_1655749-removebg-preview.png"
+          />
+        </div>
+      </div>
+    </section>
 
     <section class="m-top" id="nav-servicos">
       <div class="container">
@@ -114,12 +131,12 @@
       <div class="container">
         <h3>Serviço provisionado</h3>
         <p class="descricao">
-          O serviço utilizado nesta server proxy foi o Squid, pois o uso do mesmo como
-          Proxy/Cache é uma das opções mais utilizadas em ambientes corporativos
-          que adotam software livre para administrar a rede, seja através da
-          otimização e melhoria do desempenho da rede atuando como servidor de
-          cache ou como proxy, implementando restrições de acesso à Internet,
-          que nem sempre é possível fazer através do firewall.
+          O serviço utilizado nesta server proxy foi o Squid, pois o uso do
+          mesmo como Proxy/Cache é uma das opções mais utilizadas em ambientes
+          corporativos que adotam software livre para administrar a rede, seja
+          através da otimização e melhoria do desempenho da rede atuando como
+          servidor de cache ou como proxy, implementando restrições de acesso à
+          Internet, que nem sempre é possível fazer através do firewall.
         </p>
         <br />
         <p class="descricao">
@@ -184,21 +201,47 @@
             </xmp
         >
         <ol>
-          <li>Crie um diretório com o nome <strong>squid</strong>,<strong>config</strong> e <strong>reload</strong>:
+          <li>
+            Crie um diretório com o nome <strong>squid</strong>,<strong
+              >config</strong
+            >
+            e <strong>reload</strong>:
             <ul>
-                <li>A pasta <strong>squid</strong> é para garantir que o squid está instalado na máquina.</li>
-                <li>A pasta <strong>config</strong> é onde se localiza todas as configurações do squid, tendo suas funcionalidades, como cache, whitelist de sites e blacklist de sites.</li>
-                <li>A pasta <strong>reload</strong> é para garantir que o serviço seja recarregado, garantindo que as configurações sejam carregadas.</li>
+              <li>
+                A pasta <strong>squid</strong> é para garantir que o squid está
+                instalado na máquina.
+              </li>
+              <li>
+                A pasta <strong>config</strong> é onde se localiza todas as
+                configurações do squid, tendo suas funcionalidades, como cache,
+                whitelist de sites e blacklist de sites.
+              </li>
+              <li>
+                A pasta <strong>reload</strong> é para garantir que o serviço
+                seja recarregado, garantindo que as configurações sejam
+                carregadas.
+              </li>
             </ul>
           </li>
-          <li>Dentro do <strong>/manifests/default.pp</strong> é necessário adicionar as pastas criadas, para que o Puppet possa configurar.</li>
-          <li>Nosso grupo criou um arquivo chamado <strong>denyWebsites.lst</strong>, dentro dele fica todos os urls que estão bloqueados. Caso exista a vontade de alterar os URLs bloqueados ou adicionar, é necessário seguir esse padrão:
-        <ul><li><strong>.urlDoSite.com</strong></li></ul>
-        </li>
+          <li>
+            Dentro do <strong>/manifests/default.pp</strong> é necessário
+            adicionar as pastas criadas, para que o Puppet possa configurar.
+          </li>
+          <li>
+            Nosso grupo criou um arquivo chamado
+            <strong>denyWebsites.lst</strong>, dentro dele fica todos os urls
+            que estão bloqueados. Caso exista a vontade de alterar os URLs
+            bloqueados ou adicionar, é necessário seguir esse padrão:
+            <ul>
+              <li><strong>.urlDoSite.com</strong></li>
+            </ul>
+          </li>
         </ol>
       </div>
     </section>
     <br />
     <br />
+
+    <script src="./app.js"></script>
   </body>
 </html>

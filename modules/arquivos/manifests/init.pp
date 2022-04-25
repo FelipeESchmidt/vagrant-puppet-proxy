@@ -18,4 +18,13 @@ class arquivos {
 		source => 'puppet:///modules/arquivos/styles.css',
 	}
 
+	file { "/var/www/html/app.js":
+		ensure  => present,
+		require => Class["apache"],
+		owner  => 'root',
+		group  => 'root',
+		mode   => '0644',
+		source => 'puppet:///modules/arquivos/app.js',
+	}
+
 }
