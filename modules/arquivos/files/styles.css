@@ -7,6 +7,10 @@
 body{
     background-color: whitesmoke;
 }
+
+nophone{
+    display: none;
+}
 .container {
     width: 100%;
     max-width: 800px;
@@ -112,6 +116,7 @@ ul > li {
     }
 }
 
+
 @media screen and (max-width: 768px) {
     .showcase-image{
         display: none;
@@ -131,7 +136,13 @@ ul > li {
     .m-top{
         padding: 10px;
     }
-    xmp{
+}
+
+@media screen and (max-width: 528px) {
+    nophone {
+        display: flex;
+    }
+    header, main, footer{
         display: none;
     }
 }
