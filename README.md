@@ -26,7 +26,7 @@ nem sempre é possível ser feita por firewall.
 
 ![squid](https://www.arduinoecia.com.br/wp-content/uploads/2020/02/squid-logo-png.png) 
 
-## Pré-Requisitos
+## Pré-Requisitos do Linux
 
 ```bash
 sudo apt update
