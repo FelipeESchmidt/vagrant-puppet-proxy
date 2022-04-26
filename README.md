@@ -54,6 +54,8 @@ sudo apt-get install -y puppet
 
 ## Rodando a box
 
+***!! Certifique-se que não há nenhuma box com o nome (__serverProxy__) na máquina !!***
+
 Para rodar o arquivo Vagrantfile basta acessar a pasta com os arquivos e rodar o seguinte
 comando
 
