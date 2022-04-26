@@ -8,6 +8,7 @@ Blablabla
 ## Quais comandos são necessários pra rodar o vagrant?
 
 ## O que precisa ser feito após a criação da box?
+Após o comando vagrant up, um site será disponibilizado no IP: [192.168.60.58](http://192.168.60.58) na porta 80 (HTTP).
 
 ## Como testar?
 
@@ -30,3 +31,10 @@ O serviço utilizado neste server proxy foi o Squid, pois o uso do mesmo como Pr
 
 ## Site
 ![site_gif](https://user-images.githubusercontent.com/50564212/165188971-ecceabbf-6574-4918-a962-a290b4d8934f.gif)
+
+## Autores
+
+- [@Felipe Schmidt](https://www.github.com/FelipeESchmidt)
+- [@Gabriel Walker](https://github.com/GabrielMWalker)
+- [@Luis Gustavo Tabile](https://github.com/LuisTabile)
+
