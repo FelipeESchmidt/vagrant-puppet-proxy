@@ -30,7 +30,6 @@ nem sempre é possível ser feita por firewall.
 
 ```bash
 sudo apt update
-
 sudo apt-get update
 ```
 
@@ -71,8 +70,19 @@ Após o comando vagrant up, um site será disponibilizado no IP: [192.168.60.58]
 
 ## Utilizando o servidor proxy
 
-Para testar o serviço você terá que configurar o seu navegador para utilizar o proxy da
-box que foi criada. Para isso, siga os passos a seguir:
+O proxy pode ter várias aplicabilidades, tais quais como bloquear sites por horário, 
+bloquear URLs específicas, controlar o limite de banda entre outros.
+
+Você pode encontrar algumas funções nos seguintes links:
+
+* [Autenticação de usuários](https://gist.github.com/jackblk/fdac4c744ddf2a0533278a38888f3caf)
+* [Bloqueio de palavras](https://www.vivaolinux.com.br/topico/Squid-Iptables/Bloqueando-palavras-squid)
+* [Bloqueio de uma faixa de IP](https://under-linux.org/showthread.php?t=83897)
+* [Bloqueio de uma porta](https://www.cyberciti.biz/faq/linux-unix-squid-proxy-filtering-particular-port/)
+* [Bloqueio por horário](https://www.vivaolinux.com.br/dica/SQUID-Liberando-Internet-por-horario)
+* [Limitação de banda](https://www.vivaolinux.com.br/dica/Squid-Implementando-controle-de-banda)
+
+Como exemplo bloqueamos o acesso de URLs e para testar o serviço você terá que configurar o seu navegador para utilizar o proxy da box que foi criada. Para isso, siga os passos a seguir:
 
 * Encontre o menu de configurações do seu navegador
 * Busque por configurações avançadas
@@ -80,7 +90,6 @@ box que foi criada. Para isso, siga os passos a seguir:
 * Busque pela opção de configuração manual do proxy
 * Adicione o seguinte IP como endereço do proxy - [192.168.60.58]()
 * Adicione a seguinte porta como porta do serviço - [3128]()
-* Caso haja diferenciação entre HTTP e HTTPS marque a opção que o proxy seja utilizado para ambos.
 
 ## Testando o proxy
 
