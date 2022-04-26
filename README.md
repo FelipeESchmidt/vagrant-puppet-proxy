@@ -112,3 +112,7 @@ Para testar se o proxy está funcionando basta tentar acessar algum dos sites li
 - [@Felipe Schmidt](https://www.github.com/FelipeESchmidt)
 - [@Gabriel Walker](https://github.com/GabrielMWalker)
 - [@Luis Gustavo Tabile](https://github.com/LuisTabile)
+
+## Repositório
+
+- [___Github___](https://github.com/FelipeESchmidt/vagrant-puppet-proxy)
