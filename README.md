@@ -14,7 +14,7 @@ A linguagem de provisionamento utilizada foi a Puppet, e foi escolhida pois é a
 utilizada e desta maneira é mais fácil de encontrar documentação. Fazendo com que seja 
 mais fácil encontrar e resolver problemas que possam ocorrer.
 
-![puppet](https://s3.amazonaws.com/awsmp-logos/puppet-.jpg)
+![puppet](https://www.guardicore.com/wp-content/uploads/Puppet-logo-1.png)
 
 ### Serviço provisionado: 
 
