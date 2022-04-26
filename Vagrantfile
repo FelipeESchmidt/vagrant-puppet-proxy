@@ -3,8 +3,11 @@ $ip = "192.168.60.58"
 $message = <<MSG
 ------------------------------------------------------
 
-Server up in, #{$ip}
+Box up in, #{$ip}
 Accessible in http://#{$ip}
+
+You can find more details in the link below
+https://github.com/FelipeESchmidt/vagrant-puppet-proxy
 
 ------------------------------------------------------
 MSG
