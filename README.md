@@ -10,10 +10,11 @@ vários usuários.
 
 ### Linguagem de provisionamento:
 
-A linguagem de provisionamento utilizada foi o Ansible, e foi escolhida pois é uma das mais, você pode lidar com tarefas complexas com uma ferramenta fácil de usar. 
- 
+A linguagem de provisionamento utilizada foi a Puppet, e foi escolhida pois é a mais 
+utilizada e desta maneira é mais fácil de encontrar documentação. Fazendo com que seja 
+mais fácil encontrar e resolver problemas que possam ocorrer.
 
-![ansible](https://miro.medium.com/max/447/1*eGsQ4xEeXAL_eCoE3Ld1uw.png)
+![puppet](https://www.guardicore.com/wp-content/uploads/Puppet-logo-1.png)
 
 ### Serviço provisionado: 
 
@@ -44,10 +45,10 @@ sudo apt-get install -y virtualbox
 sudo apt-get install -y vagrant
 ```
 
-#### Ansible instalado
+#### Puppet instalado
 
 ```bash
-sudo apt-get install -y ansible
+sudo apt-get install -y puppet
 ```
 
 ## Rodando a box
@@ -115,94 +116,3 @@ Para testar se o proxy está funcionando basta tentar acessar algum dos sites li
 ## Repositório
 
 - [___Github___](https://github.com/FelipeESchmidt/vagrant-puppet-proxy)
-- 
-# Outros Serviços
-
-## Samba
-Para rodar esse trabalho você precisará ter instalado os seguintes programas:
-   - Vagrant     (apt install vagrant)
-  -  VirtualBox  (apt install virtualbox)
- -   Ansible     (apt install ansible)
-Com esses programas instalados basta executar o seguinte comando na pasta root do trabalho:
-    vagrant up
-Após finalizar o comando acesse em seu navegador a seguinte url para demais instruções.
-    http://192.168.56.56
-    
-## Email
-Configurar o mail server "Postfix" com Ansible
-
-
-
-- instale as dependências
-- entre na pasta com o Vagrantfile
-- rode `$ vagrant up`
-- acesse a máquina com `$ vagrant ssh`
-- acesse a máquina com `$ vagrant ssh`
-- criar usuário dentro da vm
-`$ sudo adduser destinatario`
-- acesse o server via telnet: `$ telnet localhost 25` (pode ser feito de fora da máquina com `$ telnet 192.168.56.56`)
-- no terminal do telnet, entrar os comandos:
-```
-MAIL FROM: root@localhost
-RCPT TO: destinatario@localhost
-
-DATA
-Subject: Título do Email
-
-Aqui está o corpo do nosso email
-
-.
-```
-- o ponto marca o final do corpo do email
-- `quit` para sair do telnet
-- para testar se o email foi enviado, faça login como destinatario:
-`$ su destinatario`
-- veja sua caixa de entrada com `$ mail` (do pacote instalado mailutils), o email recebido irá aparecer na caixa de entrada
-- dentro da vm, você também pode ver seus emails com o mail client "Mutt", que já irá estar instalado, rode: `$ mutt`, o mutt pode ser usado inclusive para facilmente deletar, responder ou encaminhar os emails
-- 
-## Firewall
-Antes de rodar o vagrant instale o Ansible com o comando: sudo apt get ansible
-
-Com a vm rodando acesse a página com o ip 192.168.56.56 
-
-
-- Preparação do UFW
-
-$ sudo nano /etc/default/ufw ## Verificar IPV6 = yes, caso não for, altere.
-$ sudo ufw disable && sudo ufw enable ## Desliga, e Ligar o Firewall para aplicar o ipv6 caso não aplicou alguma modificação
-
-$ sudo ufw allow ssh || sudo ufw allow 22/tcp ## Ambos tem a mesma função de permitirem conexões por SSH
-
-- Negar Conexões
-
-- Bloquear todos os ips de SSH
-$ sudo ufw default deny incoming ## Define o firewall para negar todas as conexões de entrada
-
-- Bloquear ip especifico
-$ sudo ufw deny from 203.0.113.4 ## Define um ip especifico para negar,o ip deve ser trocado pelo ip real que você quer bloquear
-
-$ sudo ufw allow www ## Permite acesso a todas as páginas www
-$ sudo ufw allow 80/tcp ## Para permitir acesso a porta 80 (permitir conexão http do apache e nginx)
-$ sudo ufw allow ftp || sudo ufw allow 21/tcp ## Para permitir conexões FTP
-
-## Serviço de Arquivos FPT
-
-Antes de rodar o vagrant instale o Ansible com o comando: sudo apt get ansible
-
-Com a vm rodando acesse a página com o ip 192.168.56.56 
-
-Para conectar ao servidor de arquivos utilize um client como Filezilla (https://filezilla-project.org)
-
-    - Dentro do Filezilla vá para File > Site Manager
-    - Estando lá clique em New Site
-    - Selecione TLS explícito nas opções de criptografia
-    - Utilize os seguintes dados nos campos:
-    - Host: 192.168.56.56
-     - Logon Type: Ask Password
-       - User: teste
-    - Inseridos esses dados, clique em Connect e insira a senha "teste"
-    - Para fazer o upload de um arquivo, arraste um arquivo para a janela abaixo de Remote Site
-    - Para fazer o download de um arquivo ou pasta, clique com o botão direito e escolha Download
-    
-## Banco de Dados
-Esta instalado o PHP e o PHPmyadmin
