@@ -192,13 +192,14 @@ Antes de rodar o vagrant instale o Ansible com o comando: sudo apt get ansible
 Com a vm rodando acesse a página com o ip 192.168.56.56 
 
 Para conectar ao servidor de arquivos utilize um client como Filezilla (https://filezilla-project.org)
+
     - Dentro do Filezilla vá para File > Site Manager
     - Estando lá clique em New Site
     - Selecione TLS explícito nas opções de criptografia
     - Utilize os seguintes dados nos campos:
-        - Host: 192.168.56.56
-        - Logon Type: Ask Password
-        - User: teste
+    - Host: 192.168.56.56
+     - Logon Type: Ask Password
+       - User: teste
     - Inseridos esses dados, clique em Connect e insira a senha "teste"
     - Para fazer o upload de um arquivo, arraste um arquivo para a janela abaixo de Remote Site
     - Para fazer o download de um arquivo ou pasta, clique com o botão direito e escolha Download
