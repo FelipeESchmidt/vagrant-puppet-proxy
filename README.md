@@ -116,9 +116,9 @@ Para testar se o proxy está funcionando basta tentar acessar algum dos sites li
 
 - [___Github___](https://github.com/FelipeESchmidt/vagrant-puppet-proxy)
 - 
-## Outros Serviços
+# Outros Serviços
 
-### Samba
+## Samba
 Para rodar esse trabalho você precisará ter instalado os seguintes programas:
    - Vagrant     (apt install vagrant)
   -  VirtualBox  (apt install virtualbox)
@@ -128,7 +128,7 @@ Com esses programas instalados basta executar o seguinte comando na pasta root d
 Após finalizar o comando acesse em seu navegador a seguinte url para demais instruções.
     http://192.168.56.56
     
-### Email
+## Email
 Configurar o mail server "Postfix" com Ansible
 
 
@@ -160,7 +160,7 @@ Aqui está o corpo do nosso email
 - veja sua caixa de entrada com `$ mail` (do pacote instalado mailutils), o email recebido irá aparecer na caixa de entrada
 - dentro da vm, você também pode ver seus emails com o mail client "Mutt", que já irá estar instalado, rode: `$ mutt`, o mutt pode ser usado inclusive para facilmente deletar, responder ou encaminhar os emails
 - 
-### Firewall
+## Firewall
 Antes de rodar o vagrant instale o Ansible com o comando: sudo apt get ansible
 
 Com a vm rodando acesse a página com o ip 192.168.56.56 
@@ -185,7 +185,7 @@ $ sudo ufw allow www ## Permite acesso a todas as páginas www
 $ sudo ufw allow 80/tcp ## Para permitir acesso a porta 80 (permitir conexão http do apache e nginx)
 $ sudo ufw allow ftp || sudo ufw allow 21/tcp ## Para permitir conexões FTP
 
-### Serviço de Arquivos FPT
+## Serviço de Arquivos FPT
 
 Antes de rodar o vagrant instale o Ansible com o comando: sudo apt get ansible
 
@@ -203,5 +203,5 @@ Para conectar ao servidor de arquivos utilize um client como Filezilla (https://
     - Para fazer o upload de um arquivo, arraste um arquivo para a janela abaixo de Remote Site
     - Para fazer o download de um arquivo ou pasta, clique com o botão direito e escolha Download
     
-### Banco de Dados
+## Banco de Dados
 Esta instalado o PHP e o PHPmyadmin
