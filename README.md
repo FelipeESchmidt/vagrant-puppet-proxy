@@ -14,7 +14,7 @@ A linguagem de provisionamento utilizada foi a Puppet, e foi escolhida pois é a
 utilizada e desta maneira é mais fácil de encontrar documentação. Fazendo com que seja 
 mais fácil encontrar e resolver problemas que possam ocorrer.
 
-![puppet](https://www.guardicore.com/wp-content/uploads/Puppet-logo-1.png)
+![puppet](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Puppet_transparent_logo.svg/2560px-Puppet_transparent_logo.svg.png)
 
 ### Serviço provisionado: 
 
